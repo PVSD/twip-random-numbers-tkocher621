@@ -12,7 +12,7 @@ public class Main {
     {
         List<Integer> numList = new ArrayList<>();
         int count = 0;
-        while (numList.size() < iter) {
+        while (numList.size() < 100) {
 
             int num = RandomNumber(1, 100);
 
@@ -20,14 +20,13 @@ public class Main {
                 numList.add(num);
             count++;
         }
-        System.out.println(count);
         return count;
     }
 
     private static int GetAverageLoopRunNum(int iterations)
     {
         int av = 0;
-        for (int i = 1; i <= iterations; i++)
+        for (int i = 0; i < iterations; i++)
             av += NumOfIterations(iterations);
         return av/iterations;
     }
