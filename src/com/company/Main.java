@@ -8,7 +8,7 @@ public class Main {
         return (int)(Math.random() * ((max - min) + 1) + min);
     }
 
-    private static int NumOfIterations(int iter)
+    private static int NumOfIterations()
     {
         List<Integer> numList = new ArrayList<>();
         int count = 0;
@@ -27,7 +27,7 @@ public class Main {
     {
         int av = 0;
         for (int i = 0; i < iterations; i++)
-            av += NumOfIterations(iterations);
+            av += NumOfIterations();
         return av/iterations;
     }
 
@@ -37,6 +37,8 @@ public class Main {
         System.out.println("100 loops: " + GetAverageLoopRunNum(100));
         System.out.println("1,000 loops: " + GetAverageLoopRunNum(1000));
         System.out.println("10,000 loops: " + GetAverageLoopRunNum(10000));
+        System.out.println("The variation between the answers become smaller as the amount of loops get higher\n" +
+                "because there is more data to work with, making a more accurate estimate.");
 
     }
 }
